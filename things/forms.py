@@ -9,7 +9,7 @@ class ThingForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.fields["description"].widget = forms.Textarea()
-        self.fields["quantty"].widget = forms.NumberInput()
+        self.fields["quantity"].widget = forms.NumberInput()
 
     class Meta:  
         model = Thing  
