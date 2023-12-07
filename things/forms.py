@@ -8,7 +8,7 @@ from things.models import Thing
 class ThingForm(forms.ModelForm):  
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.fields["description"].widget = forms.Textarea()
+        self.fields["description"].widget = forms.Textarea(attrs={"maxlength": 120})
         self.fields["quantity"].widget = forms.NumberInput()
 
     class Meta:  
