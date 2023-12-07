@@ -6,6 +6,8 @@
   <h1>
     Things
   </h1>
-  <p>Some stuff about things goes here.</p>
+  {% crsf_token %}
+  {{ form }}
+  <button type="submit">Submit</button>
 </body>
 </html>
